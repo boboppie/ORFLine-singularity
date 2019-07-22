@@ -25,6 +25,13 @@ Include: yum
   brew install bowtie
   brew install fastqc
   brew install cutadapt
+  mkdir -p ~/bio-tool/bin
+  cd ~/bio-tool
+  curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.3.tar.gz -o trim_galore.tar.gz
+  tar xvzf trim_galore.tar.gz
+  ln -s TrimGalore-0.6.3/trim_galore bin/trim_galore
+  cd ~
+  export PATH=~/bio-tool/bin:$PATH
   brew install trim_galore
   brew install stringtie
   brew install emboss
