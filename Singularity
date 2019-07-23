@@ -14,10 +14,22 @@ Include: yum
   curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
   bash miniconda2.sh -b -p /opt/miniconda2
   export PATH=/opt/miniconda2/bin:$PATH
+  conda update -n base -c defaults conda
   conda install -y -c conda-forge wget 
   conda install -y -c conda-forge parallel
   conda install -y -c bioconda samtools
-  conda install -y -c bioconda htslib bedtools bedops bowtie fastqc cutadapt trim-galore star stringtie emboss plastid bioconductor-riboseqr
+  conda install -y -c bioconda htslib 
+  conda install -y -c bioconda bedtools 
+  conda install -y -c bioconda bedops 
+  conda install -y -c bioconda bowtie 
+  conda install -y -c bioconda fastqc 
+  conda install -y -c bioconda cutadapt 
+  conda install -y -c bioconda trim-galore 
+  conda install -y -c bioconda star 
+  conda install -y -c bioconda stringtie 
+  conda install -y -c bioconda emboss 
+  conda install -y -c bioconda plastid 
+  conda install -y -c bioconda bioconductor-riboseqr
   Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("GenomicFeatures", "rtracklayer"))'
   cd /opt
   git clone https://github.com/boboppie/orf-discovery.git
