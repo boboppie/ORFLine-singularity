@@ -13,7 +13,6 @@ Include: yum
   yum -y update
   yum -y install tar bzip2 git
   curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
-  mkdir -p /opt/miniconda2
   bash miniconda2.sh -b -p /opt/miniconda2
   export PATH=/opt/miniconda2/bin:$PATH
   conda update -y -n base -c defaults conda
