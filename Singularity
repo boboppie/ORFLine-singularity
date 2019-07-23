@@ -13,15 +13,21 @@ Include: yum
   yum -y update
   yum -y install tar bzip2 git
   curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
+  mkdir -p /opt/miniconda2
   bash miniconda2.sh -b -p /opt/miniconda2
   export PATH=/opt/miniconda2/bin:$PATH
-  conda update -n base -c defaults conda
-  conda install -y -c conda-forge wget parallel
-  conda install -y -c bioconda samtools htslib bedtools bedops bowtie fastqc cutadapt trim-galore star stringtie emboss plastid bioconductor-riboseqr
+  conda update -y -n base -c defaults conda
+  conda install -y -c conda-forge wget 
+  conda install -y -c conda-forge parallel
+  conda install -y -c bioconda samtools
+  conda install -y -c bioconda htslib bedtools bedops bowtie fastqc cutadapt trim-galore star stringtie emboss plastid bioconductor-riboseqr
   Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("GenomicFeatures", "rtracklayer"))'
-  git clone git@github.com:boboppie/orf-discovery.git  
+  cd /opt
+  git clone https://github.com/boboppie/orf-discovery.git
   cd orf-discovery
   chmod +x *.sh
   
 %runscript
+  export PATH=/opt/miniconda2/bin:$PATH
+  echo $PATH
   echo "It's about to run some code..."
