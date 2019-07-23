@@ -7,7 +7,7 @@ Include: yum
   This is a test image we're building for ORF discovery pipeline
 
 %setup
-  touch ${SINGULARITY_ROOTFS}/i_made_a_file.txt
+  touch ${SINGULARITY_ROOTFS}/README.txt
   
 %post
   yum -y update
@@ -22,3 +22,4 @@ Include: yum
   chmod +x *.sh
   
 %runscript
+  echo "It's about to run some code..."
