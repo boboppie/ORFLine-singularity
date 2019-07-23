@@ -10,35 +10,13 @@ Include: yum
   touch ${SINGULARITY_ROOTFS}/i_made_a_file.txt
   
 %post
-  sudo yum -y update
-  sudo yum groupinstall 'Development Tools'
-  sudo yum install curl file git
-  sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-  export PATH=~/.linuxbrew/bin:$PATH
-  brew update
-  brew install wget
-  brew install parallel
-  brew install samtools 
-  brew install bedtools 
-  brew install bedops
-  brew tap brewsci/bio
-  brew install bowtie
-  brew install fastqc
-  brew install cutadapt
-  mkdir -p ~/bio-tool/bin
-  cd ~/bio-tool
-  curl -fsSL https://github.com/FelixKrueger/TrimGalore/archive/0.6.3.tar.gz -o trim_galore.tar.gz
-  tar xvzf trim_galore.tar.gz
-  ln -s TrimGalore-0.6.3/trim_galore bin/trim_galore
-  cd ~
-  export PATH=~/bio-tool/bin:$PATH
-  brew install trim_galore
-  brew install stringtie
-  brew install emboss
-  brew install R
-  pip install --user numpy pysam cython
-  pip install --user plastid
-  export PATH=~/bin:~/.local.bin:/usr/local/bin:$PATH
+  yum -y update
+  curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
+  bash miniconda2.sh -b -p /opt/miniconda2
+  export PATH=/opt/miniconda2/bin:$PATH
+  conda install -y -c conda-forge wget parallel
+  conda install -y -c bioconda samtools htslib bedtools bedops bowtie fastqc cutadapt trim-galore star stringtie emboss plastid bioconductor-riboseqr
+  Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("GenomicFeatures", "rtracklayer"))'
   git clone git@github.com:boboppie/orf-discovery.git  
   cd orf-discovery
   chmod +x *.sh
