@@ -10,12 +10,10 @@ Include: yum
   touch ${SINGULARITY_ROOTFS}/README.txt
   
 %post
-  yum -y update
   yum -y install tar bzip2 git
   curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
   bash miniconda2.sh -b -p /opt/miniconda2
   export PATH=/opt/miniconda2/bin:$PATH
-  conda update -y conda
   conda install -y -c conda-forge wget 
   conda install -y -c conda-forge parallel
   conda install -y -c bioconda samtools
