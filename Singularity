@@ -20,15 +20,17 @@ Include: yum
   conda install -y -c bioconda bedtools 
   conda install -y -c bioconda bedops 
   conda install -y -c bioconda bowtie 
-  conda install -y -c bioconda fastqc 
+  conda install -y -c bioconda fastqc s
   conda install -y -c bioconda cutadapt 
   conda install -y -c bioconda trim-galore 
   conda install -y -c bioconda star 
   conda install -y -c bioconda stringtie 
   conda install -y -c bioconda emboss 
   conda install -y -c bioconda plastid 
-  conda install -y -c bioconda bioconductor-riboseqr
-  Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("GenomicFeatures", "rtracklayer"))'
+  conda install -y -c bioconda bioconductor-rhtslib
+  conda install -y -c r r-rcurl
+  conda install -y -c r r-xml
+  Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
   cd /opt
   git clone https://github.com/boboppie/orf-discovery.git
   cd orf-discovery
