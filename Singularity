@@ -21,7 +21,7 @@ Include: yum
   conda install -y -c bioconda bedtools 
   conda install -y -c bioconda bedops 
   conda install -y -c bioconda bowtie 
-  conda install -y -c bioconda fastqc s
+  conda install -y -c bioconda fastqc
   conda install -y -c bioconda cutadapt 
   conda install -y -c bioconda trim-galore 
   conda install -y -c bioconda star 
