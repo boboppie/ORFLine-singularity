@@ -30,7 +30,6 @@ Include: yum
   conda install -y -c bioconda plastid 
   conda install -y -c bioconda bioconductor-rhtslib
   conda install -y -c r r-rcurl
-  conda install -y -c r r-xml
   Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
   cd /opt
   git clone https://github.com/boboppie/orf-discovery.git
