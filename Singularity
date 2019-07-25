@@ -29,6 +29,7 @@ Include: yum
   conda install -y -c bioconda emboss 
   conda install -y -c bioconda plastid 
   conda install -y -c bioconda bioconductor-rhtslib
+  conda install -y -c r r-xml
   conda install -y -c r r-rcurl
   Rscript -e 'source("https://bioconductor.org/biocLite.R"); BiocInstaller::biocLite(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
   cd /opt
