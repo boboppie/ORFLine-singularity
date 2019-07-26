@@ -35,8 +35,10 @@ Include: yum
   cd /opt
   git clone https://github.com/boboppie/orf-discovery.git
   cd orf-discovery
+  chmod +x *.sh
   
 %runscript
   export PATH=/opt/miniconda2/bin:$PATH
   echo $PATH
-  echo "It's about to run some code..."
+  cd /opt/orf-discovery
+  bash ./main.sh
