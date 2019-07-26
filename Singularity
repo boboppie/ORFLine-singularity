@@ -10,7 +10,7 @@ Include: yum
   touch ${SINGULARITY_ROOTFS}/README.txt
   
 %post
-  yum -y install tar bzip2 git
+  yum -y install gcc tar bzip2 git
   curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
   bash miniconda2.sh -b -p /opt/miniconda2
   export PATH=/opt/miniconda2/bin:$PATH
@@ -29,8 +29,6 @@ Include: yum
   conda install -y -c bioconda emboss 
   conda install -y -c bioconda plastid
   conda install -y -c bioconda bioconductor-rhtslib
-  conda install -y -c r r-xml
-  conda install -y -c r r-rcurl
   Rscript -e 'install.packages("BiocManager", repos="http://cran.us.r-project.org"); BiocManager::install(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
   cd /opt
   git clone https://github.com/boboppie/orf-discovery.git
