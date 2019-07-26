@@ -28,8 +28,10 @@ Include: yum
   conda install -y -c bioconda stringtie 
   conda install -y -c bioconda emboss 
   conda install -y -c bioconda plastid
-  conda install -y -c r r
-  Rscript -e 'install.packages("BiocManager"); BiocManager::install(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
+  conda install -y -c bioconda bioconductor-rhtslib
+  conda install -y -c r r-xml
+  conda install -y -c r r-rcurl
+  Rscript -e 'install.packages("BiocManager", repos="http://cran.us.r-project.org"); BiocManager::install(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
   cd /opt
   git clone https://github.com/boboppie/orf-discovery.git
   cd orf-discovery
