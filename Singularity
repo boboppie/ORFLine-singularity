@@ -30,7 +30,8 @@ Include: yum
   conda install -y -c bioconda plastid
   conda install -y -c bioconda bioconductor-rhtslib
   Rscript -e 'install.packages("BiocManager", repos="http://cran.us.r-project.org"); BiocManager::install(c("riboSeqR", "GenomicFeatures", "rtracklayer"))'
-  cd /opt
+  mkdir -p ~/project
+  cd ~/project
   git clone https://github.com/boboppie/orf-discovery.git
   cd orf-discovery
   chmod +x *.sh
@@ -38,5 +39,5 @@ Include: yum
 %runscript
   export PATH=/opt/miniconda2/bin:$PATH
   echo $PATH
-  cd /opt/orf-discovery
+  cd ~/project/orf-discovery
   bash ./main.sh
