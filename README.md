@@ -1,5 +1,5 @@
 # orf-discovery-singularity
-Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discovery) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/).
+Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discovery) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/). During image build, all orf-discovery pipeline dependencies will be installed, specifically, bioinformatics tools are installed via [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to /opt/miniconda/bin and source code will be pulled to ~/project/.
 
 ## Usage
 
@@ -8,7 +8,7 @@ Install singularity via conda:
     # Assuming root privilige
     curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
     
-    # Install miniconda in user home directory
+    # Install miniconda to user home directory
     bash miniconda2.sh -b -p ~/miniconda2
     
     # Add conda bin to $PATH
