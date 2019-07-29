@@ -3,16 +3,31 @@ Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discove
 
 ## Usage
 
-Pull the container to your machine (and optionally name custom, or by hash/commit:
+Install singularity via conda:
+
+    # Assuming root privilige
+    curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
+    
+    # Install miniconda in user home directory
+    bash miniconda2.sh -b -p ~/miniconda2
+    
+    # Add conda bin to $PATH
+    export PATH=~/miniconda2/bin:$PATH
+    
+    # Install singularity
+    conda install -y -c bioconda singularity
+    
+Pull the container to your machine:
 
     singularity pull shub://boboppie/orf-discovery-singularity
+    # the default name of the image is boboppie-orf-discovery-singularity-master-latest.simg
 
 Shell into the container:
 
-    singularity shell shub://boboppie/orf-discovery-singularity
+    singularity shell boboppie-orf-discovery-singularity-master-latest.simg
 
 Run the container:
 
-    singularity run shub://boboppie/orf-discovery-singularity
+    singularity run boboppie-orf-discovery-singularity-master-latest.simg
 
 Need more help? Please read Singularity Hub [usage guide](https://github.com/singularityhub/singularityhub.github.io/wiki/Deploy#order-of-operations).
