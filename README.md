@@ -1,7 +1,5 @@
 # orf-discovery-singularity
-Repo for making orf-discovery pipeline singularity image.
-
-Image was automatically build by [Singularity Hub](https://singularity-hub.org/).
+Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discovery) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/).
 
 ## Usage
 
