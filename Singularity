@@ -38,6 +38,9 @@ Include: yum
   
 %runscript
   export PATH=/opt/miniconda2/bin:$PATH
+  echo PATH variable
+  echo -------------
   echo $PATH
+  echo
   cd ~/project/orf-discovery
   bash ./main.sh
