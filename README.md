@@ -5,7 +5,7 @@ Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discove
 
 Install singularity via conda:
 
-    # Assuming root privilige
+    # Assuming Linux and root privilige
     curl -fsSL https://repo.anaconda.com/miniconda/Miniconda2-latest-Linux-x86_64.sh -o miniconda2.sh
     
     # Install miniconda to user home directory
