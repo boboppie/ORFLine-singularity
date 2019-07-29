@@ -1,5 +1,5 @@
 # orf-discovery-singularity
-Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discovery) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/). During image build, all orf-discovery pipeline dependencies will be installed, specifically, bioinformatics tools are installed via [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to /opt/miniconda/bin and source code will be pulled to ~/project/.
+Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discovery) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/). During image build, all orf-discovery pipeline dependencies will be installed, specifically, bioinformatics tools are installed via [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to */opt/miniconda/bin* and source code will be pulled to *~/project/*.
 
 ## Usage
 
