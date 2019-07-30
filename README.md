@@ -20,14 +20,14 @@ Install singularity via conda:
 Pull the container to your machine:
 
     singularity pull shub://boboppie/orf-discovery-singularity
-    # the default name of the image is boboppie-orf-discovery-singularity-master-latest.simg
+    # the default name of the image is orf-discovery-singularity_latest.sif
 
 Shell into the container:
 
-    singularity shell boboppie-orf-discovery-singularity-master-latest.simg
+    singularity shell orf-discovery-singularity_latest.sif
 
 Run the container:
 
-    singularity run boboppie-orf-discovery-singularity-master-latest.simg
+    singularity run orf-discovery-singularity_latest.sif
 
 Need more help? Please read Singularity Hub [usage guide](https://github.com/singularityhub/singularityhub.github.io/wiki/Deploy#order-of-operations).
