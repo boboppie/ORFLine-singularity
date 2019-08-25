@@ -39,9 +39,14 @@ Include: yum
   
 %runscript
   export PATH=/opt/miniconda2/bin:$PATH
+  export PYTHONPATH=/opt/miniconda2/lib/python2.7/site-packages
   echo PATH variable
   echo -------------
   echo $PATH
+  echo
+  echo PYTHONPATH variable
+  echo -------------
+  echo $PYTHONPATH
   echo
   cd /opt/project/orf-discovery
   bash ./main.sh
