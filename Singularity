@@ -34,6 +34,7 @@ Include: yum
   mkdir -p /opt/project
   cd /opt/project
   git clone https://github.com/boboppie/orf-discovery.git
+  chmod 777 orf-discovery
   cd orf-discovery
   chmod +x *.sh
   
