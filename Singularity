@@ -34,7 +34,6 @@ Include: yum
   mkdir -p /opt/project
   cd /opt/project
   git clone https://github.com/boboppie/orf-discovery.git
-  chmod 777 orf-discovery
   cd orf-discovery
   chmod +x *.sh
   
@@ -49,5 +48,6 @@ Include: yum
   echo -------------
   echo $PYTHONPATH
   echo
-  cd /opt/project/orf-discovery
+  cp -r /opt/project/orf-discovery ~/
+  cd ~/orf-discovery
   bash ./main.sh
