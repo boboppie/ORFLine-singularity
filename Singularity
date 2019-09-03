@@ -26,7 +26,6 @@ Include: yum
   conda install -y -c bioconda trim-galore 
   conda install -y -c bioconda star 
   conda install -y -c bioconda stringtie 
-  conda install -y -c bioconda sra-tools
   conda install -y -c bioconda emboss 
   conda install -y -c bioconda plastid
   conda install -y -c bioconda bioconductor-rhtslib
@@ -46,4 +45,4 @@ Include: yum
   echo
   cp -r /opt/project/orf-discovery ~/
   cd ~/orf-discovery
-  bash ./main.sh
+  bash ./main-test.sh
