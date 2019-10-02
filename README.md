@@ -1,5 +1,5 @@
 # orf-discovery-singularity
-Repo for making [orf-discovery pipeline](https://github.com/boboppie/orf-discovery) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/). During image build, all orf-discovery pipeline dependencies were installed, specifically, bioinformatics tools were installed via [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to */opt/miniconda/bin* and pipeline source code was pulled to *~/project/*.
+Repo for making smORF discovery pipeline [ORFLine](https://github.com/boboppie/ORFLine) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/). During image build, all orf-discovery pipeline dependencies were installed, specifically, bioinformatics tools were installed via [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to */opt/miniconda/bin* and pipeline source code was pulled to *~/project/*.
 
 ## Usage
 
@@ -19,15 +19,15 @@ Install singularity via conda:
     
 Pull the container to your machine:
 
-    singularity pull shub://boboppie/orf-discovery-singularity
-    # the default name of the image is orf-discovery-singularity_latest.sif
+    singularity pull shub://boboppie/ORFLine-singularity
+    # the default name of the image is ORFLine-singularity_latest.sif
 
 Shell into the container:
 
-    singularity shell orf-discovery-singularity_latest.sif
+    singularity shell ORFLine-singularity_latest.sif
 
 Run the container:
 
-    singularity run orf-discovery-singularity_latest.sif
+    singularity run ORFLine-singularity_latest.sif
 
 Need more help? Please read Singularity Hub [usage guide](https://github.com/singularityhub/singularityhub.github.io/wiki/Deploy#order-of-operations).
