@@ -1,4 +1,4 @@
-# orf-discovery-singularity
+# ORFLine-singularity
 Repo for making smORF discovery pipeline [ORFLine](https://github.com/boboppie/ORFLine) singularity image. Image was automatically build by [Singularity Hub](https://singularity-hub.org/). During image build, all orf-discovery pipeline dependencies were installed, specifically, bioinformatics tools were installed via [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to */opt/miniconda/bin* and pipeline source code was pulled to *~/project/*.
 
 ## Usage
